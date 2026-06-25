@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: simple-drm-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python simple_drm_backend.py"
+    envVars:
+      - key: PORT
+        value: 10000
